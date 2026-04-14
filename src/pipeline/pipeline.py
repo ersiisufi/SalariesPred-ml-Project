@@ -32,15 +32,15 @@ ordinal_transformer = Pipeline([
 ])
 
 preprocessor = ColumnTransformer([
-    ("num", numerical_transformer, numerical_features)
-    ("cat", nominal_transformer, nominal_features)
+    ("num", numerical_transformer, numerical_features),
+    ("cat", nominal_transformer, nominal_features),
     ("ord", ordinal_transformer, ordinal_features)
 ])
 
 def create_pipeline():
     model = Pipeline([
         ('Feature_engineering', FeatureEngineer()),
-        ("Preprocessing", preprocessor())
+        ("Preprocessing", preprocessor),
         ("regressor", LinearRegression())
     ])
     return model

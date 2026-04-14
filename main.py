@@ -1,6 +1,6 @@
 from src.data.load_data import load_raw_data, save_processed_data
 from src.data.preprocess import preprocess_data
-from src.features.build_features import build_features 
+# from src.features.build_features import build_features 
 from src.models.train import train_model, save_model
 
 
