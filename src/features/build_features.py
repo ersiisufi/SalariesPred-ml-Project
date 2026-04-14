@@ -1,6 +1,6 @@
 from sklearn.base import BaseEstimator, TransformerMixin
 
-class FeatureEngineeri (BaseEstimator, TransformerMixin):
+class FeatureEngineer (BaseEstimator, TransformerMixin):
     def __init__(self):
         pass
 
