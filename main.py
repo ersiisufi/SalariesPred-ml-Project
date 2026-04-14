@@ -2,6 +2,7 @@ from src.data.load_data import load_raw_data, save_processed_data
 from src.data.preprocess import preprocess_data
 # from src.features.build_features import build_features 
 from src.models.train import train_model, save_model
+from src.models.evaluate import evaluate_model, print_evaluation_results
 
 
 RAW_DATA_PATH = "data/raw/salaries.csv"
@@ -21,6 +22,8 @@ def main():
 
 
     model, X_test, y_test = train_model(df)
+    result = evaluate_model(model, X_test, y_test)
+    print_evaluation_results(*result)
 
     save_model(model)
 
